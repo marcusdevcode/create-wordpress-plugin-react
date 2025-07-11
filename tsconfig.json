@@ -1,0 +1,9 @@
+{
+  "include": ["main.ts"],
+  "compilerOptions": {
+    "strict": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "module": "esnext"
+  }
+}

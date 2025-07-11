@@ -1,9 +1,10 @@
 import { defineConfig } from 'rolldown';
 
 export default defineConfig({
-    input: 'main.cjs',
+    input: 'main.ts',
+    platform: 'node',
     output: {
-        file: 'bundle.cjs',
+        file: 'bundle.js',
         format: 'esm',
     }
 });

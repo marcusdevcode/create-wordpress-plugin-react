@@ -1,9 +1,8 @@
 {
   "name": "create-wordpress-plugin-react",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "description": "",
-  "main": "bundle.mjs",
   "scripts": {
     "build": "rolldown -c rolldown.config.ts",
     "main": "node main.mjs"
@@ -11,13 +10,17 @@
   "devDependencies": {
     "@clack/prompts": "^0.11.0",
     "@colakit/capitalize": "^1.0.12",
-    "rolldown": "^1.0.0-beta.26"
+    "@types/node": "^24.0.13",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "rolldown": "^1.0.0-beta.26",
+    "url": "^0.11.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/marcusdevcode/create-wordpress-plugin-react.git"
   },
   "bin": {
-    "wordpress-react-plugin": "main.mjs"
+    "wordpress-plugin-react": "bundle.js"
   }
 }

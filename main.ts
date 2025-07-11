@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import { text,confirm,stream,spinner,note } from '@clack/prompts';
 import capitalize from "@colakit/capitalize";
-import { readFileSync,readdirSync,lstatSync,existsSync,mkdirSync,writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import path from 'path';
+import * as fs from 'node:fs';
+import { fileURLToPath } from 'url';
+import * as path from 'node:path'
+import {existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, writeFileSync} from "node:fs";
 const cwd = process.cwd()
 const nameToSlug = (meaning,space_replacer= "") => {
 	return getSlug(meaning).replace(new RegExp("(\\s|\\t)",'g'),space_replacer)
@@ -101,4 +102,4 @@ const nameToSlugCapitalize = (meaning) => {
 	let meaning_name = getSlug(meaning).replace(new RegExp("(\\s|\\t)",'g'),"");
 	return capitalize(meaning_name);
 }
-await nameYourPlugin(text);
+nameYourPlugin(text);
