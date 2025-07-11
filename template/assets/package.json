@@ -1,0 +1,20 @@
+{
+  "name": "plugin-slug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@wordpress/interactivity": "^6.26.0",
+    "@wordpress/scripts": "^30.19.0",
+    "ts-loader": "^9.5.2"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^7.26.0"
+  }
+}

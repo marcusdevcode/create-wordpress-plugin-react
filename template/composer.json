@@ -1,0 +1,11 @@
+{
+  "name": "plugin-slug/plugin-slug",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "PluginSlug\\": "./classes"
+    }
+  }
+}
