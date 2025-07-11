@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { text,confirm,stream,spinner,note } from '@clack/prompts';
 import capitalize from "@colakit/capitalize";
 import { readFileSync,readdirSync,lstatSync,existsSync,mkdirSync,writeFileSync } from 'node:fs';
