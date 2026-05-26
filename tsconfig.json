@@ -4,6 +4,8 @@
     "strict": false,
     "resolveJsonModule": true,
     "moduleResolution": "Bundler",
-    "module": "esnext"
+    "module": "esnext",
+    "esModuleInterop": true,
+    "types": ["node"]
   }
 }

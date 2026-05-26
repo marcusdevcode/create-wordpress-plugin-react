@@ -1,0 +1,20 @@
+{
+  "name": "blocksslug-blocks",
+  "version": "1.0.0",
+  "description": "Custom Gutenberg blocks compiled with TypeScript and TSX.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development wp-scripts start",
+    "build": "cross-env NODE_ENV=production wp-scripts build"
+  },
+  "devDependencies": {
+    "@types/wordpress__block-editor": "^15.0.6",
+    "@types/wordpress__blocks": "^15.10.2",
+    "@wordpress/block-editor": "^15.19.0",
+    "@wordpress/blocks": "^15.19.0",
+    "@wordpress/components": "^33.1.0",
+    "@wordpress/scripts": "^32.2.0",
+    "copy-webpack-plugin": "^14.0.0",
+    "cross-env": "^10.1.0"
+  }
+}

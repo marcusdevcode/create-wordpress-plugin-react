@@ -4,10 +4,12 @@
  * Plugin URI:
  * Description:
  * Version: 1.0
- * Author: Plugin_Author
- *  License: GPLv3
+ * Author: My Custom Software
+ * Author URI: https://mycustomsoftware.com
+ * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Requires PHP: 7.4
+ * Tested up to: 7.0
  **/
 
 use PluginSlug\AdminAssets;

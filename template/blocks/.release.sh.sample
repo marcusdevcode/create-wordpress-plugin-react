@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# 1. Set your Access Token and version variables
+export GL_TOKEN="your_actual_personal_access_token_here"
+export VERSION="v1.0.0"
+
+# 2. Package your plugin/theme cleanly (excluding dev noise)
+zip -r plugin-slug.zip . -x "*.git*" "*node_modules*" "*src*" "tsconfig.json" "package.json" "package-lock.json" "webpack.config.js" "yarn.lock" "*Technical Architecture Summary.md*" "release.sh" ".release.sh.sample" "*/.DS_Store" "*.zip"
+
+# 3. Upload the asset right to your project registry
+ curl --header "PRIVATE-TOKEN: $GL_TOKEN" \
+      --upload-file ./plugin-slug.zip \
+      "https://gitlab.com/api/v4/projects/ourteamcloud%2Fplugin-slug-plugin/packages/generic/production-builds/$VERSION/plugin-slug.zip"
+rm -fr plugin-slug.zip

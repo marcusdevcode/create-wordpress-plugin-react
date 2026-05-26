@@ -1,0 +1,11 @@
+{
+  "name": "theme-plugin/theme-plugin",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "PluginSlug\\": "./classes"
+    }
+  }
+}

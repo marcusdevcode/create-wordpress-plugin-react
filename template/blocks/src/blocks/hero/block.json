@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocksslug/hero",
+  "title": "Hero (1-image)",
+  "description": "Full-bleed hero with bg image, gradient, animation, CTA.",
+  "category": "design",
+  "icon": "cover-image",
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "textdomain": "blocksslug",
+  "editorScript": "blocksslug",
+  "editorStyle": "blocksslug-editor",
+  "script": "blocksslug-design",
+  "style": "blocksslug-style",
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": "A community where the people"
+    },
+    "headline_accent": {
+      "type": "string",
+      "default": "are the community."
+    },
+    "lede": {
+      "type": "string",
+      "default": "Like-minded families in Henderson…"
+    },
+    "cta_label": {
+      "type": "string",
+      "default": "Plan a Visit"
+    },
+    "cta_href": {
+      "type": "string",
+      "default": "/plan-a-visit/"
+    },
+    "image_url": {
+      "type": "string",
+      "default": ""
+    },
+    "image_id": {
+      "type": "number",
+      "default": 0
+    }
+  }
+}
