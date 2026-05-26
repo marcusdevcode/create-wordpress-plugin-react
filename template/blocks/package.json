@@ -1,5 +1,5 @@
 {
-  "name": "blocksslug-blocks",
+  "name": "plugin-slug-blocks",
   "version": "1.0.0",
   "description": "Custom Gutenberg blocks compiled with TypeScript and TSX.",
   "main": "build/index.js",
