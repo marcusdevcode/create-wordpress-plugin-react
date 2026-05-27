@@ -1284,19 +1284,40 @@ const nameYourPlugin = async (text) => {
 		placeholder: " My Awesome Plugin Name",
 		initialValue: ""
 	});
-	if (typeof plugin_name === "string") {
+	const projectType = await ve({
+		message: "What type of project would you like to create?",
+		options: [{
+			value: "page",
+			label: "TypeScript App Page Settings in admin",
+			hint: "recommended"
+		}, {
+			value: "blocks",
+			label: "TypeScript App Blocks",
+			hint: "recommended"
+		}]
+	});
+	let BlocksSlug = "";
+	if (projectType === "blocks") BlocksSlug = await text({
+		message: "What is your Blocks slug?",
+		placeholder: "my_blocks",
+		initialValue: "my_blocks"
+	});
+	if (typeof plugin_name === "string" && typeof projectType === "string") {
 		const PluginSlug = nameToSlugCapitalize(plugin_name);
 		const PLUGIN_SLUG = nameToSlug(plugin_name, "_");
 		const PLUGINMINUSSLUG = nameToSlug(plugin_name, "-").toLowerCase();
+		const BlocksSlugLowerCase = nameToSlug(BlocksSlug, "").toLowerCase();
 		const shouldContinue = await ye({ message: `Plugin folder will be ${PluginSlug}. Do you want to continue?` });
 		if (!shouldContinue) return await nameYourPlugin(text);
 		const replaceText = {
+			"BlocksSlug": BlocksSlug,
+			"blocksslug": BlocksSlugLowerCase,
 			"Plugin_Name": plugin_name,
 			"PluginSlug": PluginSlug,
 			"PLUGIN_SLUG": PLUGIN_SLUG.toUpperCase(),
 			"plugin-slug": PLUGINMINUSSLUG
 		};
-		const PathDir = fileURLToPath(new URL("./template", import.meta.url));
+		const PathDir = fileURLToPath(new URL(`./template/${projectType}`, import.meta.url));
 		const root = path.join(cwd, PLUGINMINUSSLUG);
 		const s = Y();
 		s.start("Creating plugin!");
