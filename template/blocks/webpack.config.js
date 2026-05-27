@@ -5,7 +5,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin'; // <-- 1. Import the plugin
 
 const dev_folder = 'src';
 const build_folder = 'frontend';
-const BLOCKS_SLUG = 'tp';
+const BLOCKS_SLUG = 'blocksslug';
 
 // Filter out the default instance so we don't duplicate it
 const filteredPlugins = defaultConfig.plugins.filter(
